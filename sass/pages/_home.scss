@@ -27,11 +27,12 @@
 
 .section-tours {
   margin-top: -10rem;
-  transform: skewY(-7deg);
   background-color: $color-grey-light-1;
-  padding: 25rem 0 50rem 0;
+  padding: 15rem 0 15rem 0;
+}
 
-  & > * {
-    transform: skewY(7deg);
-  }
+.section-stories {
+  margin-top: -10rem;
+  padding: 15rem 0;
+  position: relative;
 }

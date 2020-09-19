@@ -103,6 +103,12 @@ body {
 .u-margin-botton-medium {
   margin-bottom: 4rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -117,6 +123,12 @@ body {
   color: #777777; }
   .btn-white::after {
     background-color: white; }
+
+.btn-green {
+  background-color: #55c57a;
+  color: white; }
+  .btn-green::after {
+    background-color: #55c57a; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -294,6 +306,59 @@ body {
   .card__price-value {
     font-size: 6rem; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__user-image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.8s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__user-image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -358,11 +423,13 @@ body {
 
 .section-tours {
   margin-top: -10rem;
-  transform: skewY(-7deg);
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0; }
-  .section-tours > * {
-    transform: skewY(7deg); }
+  padding: 15rem 0 15rem 0; }
+
+.section-stories {
+  margin-top: -10rem;
+  padding: 15rem 0;
+  position: relative; }
 
 body {
   font-family: "Lato", sans-serif;
