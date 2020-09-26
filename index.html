@@ -17,7 +17,6 @@
   </head>
 
   <body>
-    <!--   .....................        HEADER SECTION..........................                    -->
 
     <!--   ..................... .......NAVIGATION SECTION..........................                    -->
 
@@ -33,16 +32,19 @@
       <nav class="navigation_nav">
         <ul class="navigation_list">
 
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>01 </span> About Natours</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>02 </span>Your Benfits</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>03 </span>Popular Tours</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>04 </span>Stories</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>05 </span>Book Now</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">About Natours</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Your Benfits</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Popular Tours</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Stories</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">Book Now</a></li>
 
         </ul>
       </nav>
 
     </div>
+
+    <!--   .....................        HEADER SECTION..........................                    -->
+
 
     <header class="header">
       <div class="header-logo-box">
@@ -54,7 +56,7 @@
           <span class="heading-primary-main">Outdoors</span>
           <span class="heading-primary-sub">is where life happens</span>
         </h1>
-        <a href="#" class="btn btn-white btn-animated">Discover our Tours</a>
+        <a href="#section-tours" class="btn btn-white btn-animated">Discover our Tours</a>
       </div>
     </header>
 
@@ -177,7 +179,7 @@
 
       <!--   .....................    POPULAR TOURS SECTION..........................                    -->
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-large">
           <h2 class="heading-secondary">Most popular Tours</h2>
         </div>
@@ -211,7 +213,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">₹7,000</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book Now!</a>
+                  <a href="#popup" class="btn btn-white">Book Now!</a>
                 </div>
               </div>
             </div>
@@ -247,7 +249,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">₹18,000</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book Now!</a>
+                  <a href="#popup" class="btn btn-white">Book Now!</a>
                 </div>
               </div>
             </div>
@@ -283,7 +285,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">₹23,000</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book Now!</a>
+                  <a href="#popup" class="btn btn-white">Book Now!</a>
                 </div>
               </div>
             </div>
@@ -427,6 +429,30 @@
       </div>
 
     </footer>
+
+    <!--.......................BOOKING POPUP......................................-->
+
+    <div class="popup" id="popup">
+      <div class="popup_content">
+        <div class="popup_left">
+          <img src="./img/nat-8.jpg" alt="Tour Photo" class="popup_img">
+          <img src="./img/nat-9.jpg" alt="Tour Photo" class="popup_img">
+
+        </div>
+        <div class="popup_right">
+          <a href="#section-tours" class="popup_close">&times;</a>
+          <h2 class="heading-secondary">Start Booking now</h2>
+          <h3 class="heading_tertiary">Important &ndash; Please read these terms before booking</h3>
+          <p class="popup_text">
+            All prices are subject to availability and can be withdrawn or varied without notice. Prices quoted are subject to
+            change at any time until full payment is received from the Client and tickets issued. Price changes may occur by reason
+            of matters outside our control which increase the cost of the products or services. On account of such price change.
+
+          </p>
+          <a href="#" class="btn btn-green u-margin-botton-small">Book now</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Float Grid TESTING 
     <section class="grid-test">

@@ -1,0 +1,82 @@
+.popup {
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 6rem;
+  z-index: 2500;
+  transition: all 0.6s;
+  opacity: 0;
+  visibility: hidden;
+
+  &_close {
+    &:link,
+    &:visited {
+      color: #777;
+      position: absolute;
+      text-decoration: none;
+      top: 2.5rem;
+      right: 3rem;
+      display: inline-block;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &_content {
+    @include absCenter;
+    width: 76%;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.4s 0.3s;
+  }
+
+  &_left {
+    width: 33.333333%;
+    display: table-cell;
+  }
+
+  &_right {
+    width: 66.6666666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4rem;
+  }
+
+  &_img {
+    display: block;
+    width: 100%;
+  }
+
+  &_text {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+  }
+
+  // to show popup when the target element is there
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &_content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
