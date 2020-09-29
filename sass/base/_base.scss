@@ -3,11 +3,40 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
   // default font-size is 16px and we want 10px because we are using "rem" which is converted to "px". 62.5% of 16 = 10.
+  // 1 rem = 10px;
   //according to root elemnent font size .SO it will be easy to use rem.
   font-size: 62.5%;
+
+  // for width < 1200px
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px
+  }
+
+  /* for width < 900px. we need this after above because in mixins the latest styles will apply. so if width = 700px.
+   it is less then 900 and also 1200. But we want styles of < 900 apply so we need these styles after 1200px styles so that it
+   these will be latest and applied. */
+
+  // for width < 900px
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0rem;
+  }
 }
