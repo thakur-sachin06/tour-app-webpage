@@ -10,6 +10,13 @@
   transition: all 0.6s;
   opacity: 0;
   visibility: hidden;
+  backdrop-filter: blur(10px);
+
+  // Checking whether a browser supports this property or not.
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
 
   &_close {
     &:link,

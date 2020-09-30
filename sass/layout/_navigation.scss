@@ -144,20 +144,20 @@
     }
 
     &::before {
-      top: -0.8rem;
+      top: -1rem;
     }
     &::after {
-      top: 0.8rem;
+      top: 1rem;
     }
   }
 
-  &_button:hover &_icon::before {
-    top: -1rem;
-  }
+  // &_button:hover &_icon::before {
+  //   top: -0.8rem;
+  // }
 
-  &_button:hover &_icon::after {
-    top: 1rem;
-  }
+  // &_button:hover &_icon::after {
+  //   top: 0.8rem;
+  // }
 
   // to make CROSS SIGN when we click on navigation icon.
 
