@@ -13,7 +13,8 @@
 
   // Responsive images in CSS. based on width and resolution we will show different images
   // on resolution > 192dpi and width > 600px or width > 125em we will show this image
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-secondary-light, 0.8),
